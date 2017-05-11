@@ -8,15 +8,15 @@ Group=factorio
 
 # We will store a pid file in your ${WRITE_DIR}/server.pid
 # Adjust if you change the write dir of your server
-PIDFile=/opt/factorio/server.pid
+#PIDFile=/opt/factorio/server.pid
 
-Type=forking
-TimeoutStartSec=20
-ExecStart=/opt/factorio-init/factorio start
-TimeoutStopSec=20
-ExecStop=/opt/factorio-init/factorio stop
-RestartSec=20
-Restart=on-failure
+Type=simple
+#TimeoutStartSec=20
+ExecStart=/opt/factorio/bin/x64/factorio start
+#TimeoutStopSec=20
+#ExecStop=/opt/factorio/bin/x64/factorio stop
+#RestartSec=20
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
