@@ -12,7 +12,7 @@ Group=factorio
 
 Type=simple
 #TimeoutStartSec=20
-ExecStart=/opt/factorio/bin/x64/factorio start
+ExecStart=/opt/factorio/bin/x64/factorio --port 34197 --server-settings /opt/factorio/data/server-settings.json --start-server-load-latest
 #TimeoutStopSec=20
 #ExecStop=/opt/factorio/bin/x64/factorio stop
 #RestartSec=20
